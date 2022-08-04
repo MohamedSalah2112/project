@@ -1,0 +1,318 @@
+body {
+    background-color: #f0f4f6;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica, sans-serif !important;
+}
+
+.toggle {
+
+    height: 30px;
+    width: 30px;
+    background-color: #134787;
+    cursor: pointer;
+    border-radius: 2px;
+    position: relative;
+    right: 10%;
+}
+
+.toggle span {
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50px;
+
+}
+
+.toggle .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page2 {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+}
+
+nav {
+    display: flex;
+    background-color: #134787;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 15px;
+    height: 40px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+    margin: 10px;
+}
+
+ul li {
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+}
+
+i {
+    background-color: transparent;
+}
+
+.list i {
+    background-color: #00a65a;
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.calendar i {
+    background-color: #dd4b39;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.comments i {
+    background-color: #f39c12;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.users i {
+    background-color: #dd4b39;
+
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.book i {
+    background-color: cyan;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px
+}
+
+.grid {
+    margin-left: 100px;
+
+    padding: 20px;
+    background-color: white;
+    width: 85%;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: repeat(9, 150px);
+    grid-template-areas:
+        "input input input input input input input input input"
+        "course course  discussion  discussion chat chat calender calender ."
+        "complaint complaint complaint complaint . . . . ."
+        "tab tab tab tab tab tabco tabco tabco tabco"
+        "tabchat tabchat tabchat tabchat tabchat . . . .";
+    gap: 10px;
+    grid-template-rows: 75px 100px 120px 220px;
+}
+
+.grid .content-area {
+    height: 100px;
+}
+
+.grid .info {
+    position: absolute;
+    font-size: 20px;
+    color: #333333;
+    top: 10px;
+    left: 150px;
+    text-transform: uppercase;
+}
+
+.mycourses {
+    grid-area: course;
+}
+
+.discussion {
+    grid-area: discussion;
+}
+
+.chat {
+    grid-area: chat;
+}
+
+.calender {
+    grid-area: calender;
+}
+
+.calender,
+.chat,
+.complaints,
+.discussion,
+.mycourses {
+    box-shadow: 1px 1px 10px 0px rgb(0 0 0 / 25%);
+    background-color: #ecf0f5;
+    position: relative;
+    height: 100px;
+}
+
+.search {
+    grid-area: input;
+    display: flex;
+    height: 30px;
+    position: relative;
+    justify-content: flex-end;
+    top: 50px;
+    left: 180px;
+}
+
+.search .find {
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button {
+    margin-left: 20px;
+    background-color: #134787;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.complaints {
+    grid-area: complaint;
+}
+
+.no_subject {
+    position: absolute;
+    top: 15px;
+    color: red;
+}
+
+div .no {
+    width: 100%;
+    height: 10px;
+    background-color: #ecf0f5;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.table-chat {
+    grid-area: tabchat;
+    background-color: white;
+    border: 2px solid #ecf0f5;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.table-complaints {
+    grid-area: tab;
+    background-color: white;
+    border: 2px solid #ecf0f5;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.table-courses {
+    grid-area: tabco;
+
+    background-color: white;
+    border: 2px solid #ecf0f5;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.couse-date {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+div .co2 {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.co2 a {
+    color: blue;
+    padding: 50px
+}
+
+.co2 a:hover {
+    opacity: 50%;
+}
+
+.co2 img {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
